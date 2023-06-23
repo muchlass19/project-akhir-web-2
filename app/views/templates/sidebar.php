@@ -34,7 +34,7 @@
             <li class="sidebar-item">
               <a class="sidebar-link" href="<?= BASEURL ?>/wallet" aria-expanded="false">
                 <span>
-                  <i class="ti ti-article"></i>
+                  <i class="ti ti-wallet"></i>
                 </span>
                 <span class="hide-menu">Dompet</span>
               </a>
@@ -42,7 +42,7 @@
             <li class="sidebar-item">
               <a class="sidebar-link" href="<?= BASEURL ?>/transaction" aria-expanded="false">
                 <span>
-                  <i class="ti ti-alert-circle"></i>
+                  <i class="ti ti-cash"></i>
                 </span>
                 <span class="hide-menu">Transaksi</span>
               </a>
