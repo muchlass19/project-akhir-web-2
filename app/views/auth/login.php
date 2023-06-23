@@ -5,6 +5,13 @@
       class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center">
       <div class="d-flex align-items-center justify-content-center w-100">
         <div class="row justify-content-center w-100">
+          <!-- FLASHER -->
+          <div class="row justify-content-center">
+            <div class="col-12 w-50">
+              <?php Flasher::flash() ?>
+            </div>
+          </div>
+          <!-- END FLASHER -->
           <div class="col-md-8 col-lg-6 col-xxl-3">
             <div class="card mb-0">
               <div class="card-body">
