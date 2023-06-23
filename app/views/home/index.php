@@ -1,6 +1,5 @@
 <div class="container-fluid">
         <!--  Row 1 -->
-        <h1><?= $data['wallet_name'] ?></h1>
         <div class="row">
           <div class="col-lg-8 d-flex align-items-strech">
             <div class="card w-100">
