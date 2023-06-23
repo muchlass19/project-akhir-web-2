@@ -1,4 +1,11 @@
 <div class="container-fluid">
+        <!-- FLASHER -->
+        <div class="row">
+            <div class="col-md-6">
+              <?php Flasher::flash() ?>
+            </div>
+        </div>
+        <!-- END FLASHER -->
         <!--  Row 1 -->
         <div class="row">
           <div class="col-lg-8 d-flex align-items-strech">

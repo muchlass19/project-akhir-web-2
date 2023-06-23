@@ -3,6 +3,7 @@
 class UserModels {
     private $table = 'users';
     private $db;
+    private $response;
 
     public function __construct() {
         $this->db = new Database;
@@ -10,8 +11,6 @@ class UserModels {
 
     public function register($data) {
         $password = password_hash($data['password'], PASSWORD_BCRYPT);
-
-        // var_dump("$data[fullname] $data[email] $password");
 
         $query = "INSERT INTO $this->table (id, fullname, email, password) VALUES ('', :fullname, :email, :password)";
         $this->db->query($query);
@@ -27,7 +26,7 @@ class UserModels {
     }
 
     public function login($data) {
-        $query = "SELECT password FROM $this->table WHERE email = :email";
+        $query = "SELECT * FROM $this->table WHERE email = :email";
         $this->db->query($query);
 
         $this->db->bind('email', $data['email'], PDO::PARAM_STR);
@@ -38,14 +37,12 @@ class UserModels {
 
         if($result) {
             $storedPassword = $result['password'];
-
             if(password_verify($data['password'], $storedPassword)) {
-                return 1;
-            } else {
-                return 0;
+                return $result;
             }
         }
 
         return 0;
+        
     }
 }
